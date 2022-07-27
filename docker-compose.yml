@@ -1,0 +1,19 @@
+version: '3.9'
+
+
+services:
+# app is name of our service
+  app:
+    build: 
+    # build the docker file inside current directory i.e root 
+      context: .
+      args:
+      #telling to use develeopement mode
+        - DEV=true  
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+      # command to use the service 
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"

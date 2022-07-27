@@ -1,0 +1,18 @@
+# Git
+.git 
+.gitignore
+
+
+#  Docker
+.docker 
+
+# Python
+# * are for diving into sub-directories
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
+.env/
+.venv/
+venv/
+
